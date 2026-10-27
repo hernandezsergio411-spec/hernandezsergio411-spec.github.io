@@ -326,7 +326,7 @@ root.addEventListener('submit',async e=>{
  if(kind==='note'){await action(async()=>{check(await sb.from('notes').insert({household_id:state.home.id,author_id:state.user.id,body:String(f.get('note')).trim()}))},'Nota guardada para ambos');}
 });
 setInterval(()=>{if(state.timerRunning)refreshTimer()},300);
-setInterval(()=>{if(state.user&&state.home)showAlerts()},60000);
+setInterval(()=>{if(state.user&&state.home)showAlerts()},15000);
 if(sb){sb.auth.onAuthStateChange((_event,session)=>{const id=session?.user?.id||null;if(id!==state.user?.id&&state.ready){loading();Promise.resolve().then(hydrate);}});window.addEventListener('focus',()=>{if(state.user&&!state.busy)refreshLive().catch(()=>{})});document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&state.user&&!state.busy)refreshLive().catch(()=>{})});}
 loading();hydrate();
 </script>
