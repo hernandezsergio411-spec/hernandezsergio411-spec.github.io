@@ -1,0 +1,19 @@
+{
+  "name": "Mi Agenda Remuzz",
+  "short_name": "Agenda Remuzz",
+  "description": "Solicita y administra citas de Estética Remuzz",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "es-CL",
+  "background_color": "#F8F5F1",
+  "theme_color": "#312521",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
