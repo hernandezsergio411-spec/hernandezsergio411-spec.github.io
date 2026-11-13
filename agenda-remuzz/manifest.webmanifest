@@ -1,0 +1,19 @@
+{
+  "name": "Agenda Remuzz",
+  "short_name": "Remuzz",
+  "description": "Reservas y agenda de Estética Remuzz",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F7F1EC",
+  "theme_color": "#241C1A",
+  "lang": "es-CL",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
