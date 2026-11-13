@@ -4,7 +4,7 @@ const API='https://c--e21801fd-0e4b-4a5d-baa7-31b8135aed72-prod.lovable.cloud';
 const PUBLIC_KEY='sb_publishable_82rg76CtKdB5HoDpOE_jPA_WdXxyhH2';
 const PUSH_TOPIC='remuzz-notice-a7d82934b6c0f1ce';
 const ZONE='America/Santiago';
-const $=q=>document.querySelector(q);
+const $=(q,root)=>root?document.querySelector(root)?.querySelector(q):document.querySelector(q);
 const $$=q=>Array.from(document.querySelectorAll(q));
 function safe(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function money(v){return '$'+Math.round(Number(v)||0).toLocaleString('es-CL');}
