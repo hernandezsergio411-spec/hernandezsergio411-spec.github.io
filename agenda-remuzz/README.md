@@ -31,3 +31,18 @@ Instalar app ntfy en Android o iOS. Crear suscripción al tema `remuzz-book-f0fb
 - No se publican nombres ni teléfonos de pacientes en GitHub.
 - Las tablas de datos de pacientes tienen RLS y solo aceptan lecturas autenticadas autorizadas.
 - La página pública solo utiliza funciones RPC.
+
+## Despliegue recomendado en Vercel
+
+- Vercel: importar repositorio GitHub `hernandezsergio411-spec/hernandezsergio411-spec.github.io`.
+- **Nombre del proyecto:** `agenda-remuzz`.
+- **Root Directory:** `agenda-remuzz` (es indispensable: el repositorio también tiene otro sitio en la raíz).
+- **Framework Preset:** `Other` / sin framework, sitio estático.
+- **Build Command:** vacío / desactivado.
+- **Output Directory:** vacío / predeterminado (publicar directamente la carpeta raíz configurada).
+- **Install Command:** vacío / desactivado.
+- **Rama de producción:** `main`.
+- **Variables de entorno:** no hace falta para el frontend estático; usa solamente la publishable key de Supabase embebida. No añadir `SUPABASE_SERVICE_ROLE_KEY` al cliente.
+- Al publicar, validar el URL real de Vercel antes de compartir con pacientes. La página pública envía reservas a un backend externo de Supabase; Vercel sirve la aplicación, no traslada la base de datos.
+
+La API de Vercel ha denegado la creación de proyectos a la conexión actual con error 403 (permisos insuficientes). La importación debe completarse desde una cuenta de Vercel con permisos de creación. El código de la aplicación ya está en el repositorio. 
